@@ -1,2 +1,19 @@
 # Variant-detection
-Summarize and analyze somatic variants of DLBCL cohort study
+Data Mining Analysis and Variant Annotation in a Comprehensive Diffuse Large B-Cell Lymphoma Dataset
+# Goal
+In the realm of cancer research, large-scale whole-exome sequencing (WXS) of diverse cancer samples has become the predominant method for uncovering genetic abnormalities associated with cancer development. Published datasets of substantial size present opportunities for reanalysis, contributing to the advancement of our knowledge regarding cancer genomics and biology. Somatic variants serve as foundational data for various analyses, including the detection of driver genes, pathway analysis, exploration of mutational signatures, and the assessment of tumor heterogeneity. The TCGA mutational analysis format is a standardized method introduced by TCGA for the storage and distribution of somatic variants, encompassing the entire somatic landscape of a given cohort. For this study, TCGA mutational analysis format files, along with clinical data from a DLBCL cohort, were acquired from the GDC data portal.
+# Results
+Utilizing a dataset of DLBCL with a sample size of 54, the analysis illustrates genes significantly mutated (FDR<0.1) as identified by the MutSigCV algorithm. Genes are arranged by mutational frequency, while samples are sorted and organized based on tumor histology, effectively revealing the mutational landscape distinctions within the samples. The transition and transversion analysis condense single nucleotide variants into six categories, highlighting the most prevalent changes, particularly C>T alterations. The analysis also accentuates highly mutated genes, specifically IGHG2 and KMT2D, in DLBCL, featuring recurrent hotspots that are explicitly labeled. Our study reports hypermutated genomic regions within the DLBCL cohort, termed "Kataegis." These regions are believed to arise from the aberrant activity of apolipoprotein B mRNA editing enzyme, catalytic polypeptide-like (APOBEC) cytidine deaminases. Applying mutational signatures and enrichment analysis, utilizing the cophenetic correlation metric, we identified five signatures in DLBCL with a false discovery rate (FDR) less than 0.01. Noteworthy among these de novo signatures are the enrichment of an APOBEC-related signature (COSMIC Signature 12), with a cosine similarity of 0.858. Moreover, we observed elevated mutation rates in APOBEC-enriched samples (Fisher's exact test P < 0.01) within the genes KMT2D, NFKBIE, and H1-4. Notably, these proteins play vital roles in preserving genome integrity, and the heightened mutational prevalence in APOBEC-high tumors implies an increased susceptibility to DNA damage and APOBEC-mediated genome instability. To illustrate the somatic interactions among mutually exclusive mutated genes in the DLBCL cohort, we replicated the associations of IRF4/CREBBP (mutually exclusive; Pvalue=0.012) and CD79B/IGHG2 (co-occurring; Pvalue=0.001). The identification of DLBCL driver genes was based on mutational frequencies, revealing 10 well-known oncogenes as significantly mutated (FDR<0.1), including established lymphoma oncogenes KIT and KRAS.
+## Figure 1:
+Summary of somatic variants from DLBCL study cohort
+## Figure 2:
+Classification of SNPs
+## Figure 3:
+Somatic mutation distribution-associated genes
+## Figure 4:
+Mutational signature and enrichment analysis
+## Figure 5
+Enrichment analysis of DLBCL ATCG study cohort
+
+# Conclusion
+The study offers valuable insights into the fundamental mutational processes steering tumorigenesis. These processes serve as distinct imprints, revealing specific mutagenic influences like UV radiation exposure, DNA repair deficiencies, or DNA damage mechanisms. Unraveling the mutational signatures in diffuse large B-cell lymphoma (DLBCL) is instrumental in illuminating the biological mechanisms propelling the development of this disease.
